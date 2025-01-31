@@ -2,30 +2,8 @@
 
 ## About this repository
 
-- Dự án này dùng để làm giả các commit trên github theo mốc thời gian mà bạn muốn.
-- Dự án này mình làm chỉ để cho vui thôi hehe ^^
-
-## How to get the `GITHUB_TOKEN`
-
-Để lấy một Personal Access Token (PAT) từ GitHub, bạn cần làm theo các bước sau đây. Token này sẽ cho phép bạn thực hiện các hoạt động trên GitHub thông qua API, chẳng hạn như tạo repository mới, push code, và nhiều thao tác khác tùy thuộc vào các quyền bạn cấp cho token.
-
-- **Bước 1**: Đăng nhập vào GitHub
-  - Mở trình duyệt của bạn và đăng nhập vào tài khoản GitHub của bạn tại github.com.
-- **Bước 2**: Truy cập vào Settings
-  - Sau khi đăng nhập, nhấp vào ảnh đại diện của bạn ở góc trên bên phải màn hình, sau đó chọn Settings từ menu thả xuống.
-- **Bước 3**: Truy cập vào [Developer settings](https://github.com/settings/apps)
-  - Trong trang cài đặt, cuộn xuống dưới cùng và chọn Developer settings ở cuối trang, nằm trong phần dành cho các tùy chỉnh nâng cao.
-- **Bước 4**: [Personal Access Tokens](https://github.com/settings/tokens)
-  - Trong menu bên trái của Developer settings, chọn Personal access tokens. Sau đó nhấp vào nút Generate new token ở góc trên bên phải của danh sách token hiện có (nếu có).
-- **Bước 5**: Tạo Token [New Token](https://github.com/settings/tokens/new)
-  - Đặt tên cho token của bạn trong trường Note để dễ nhận diện mục đích sử dụng của nó sau này.
-  - Chọn thời gian hết hạn cho token trong phần Expiration. Bạn có thể chọn từ "No expiration" cho đến thời gian nhất định như 30 ngày, 90 ngày, v.v.
-  - Chọn các quyền (scopes) mà bạn muốn cấp cho token. Để tạo và quản lý repositories, đảm bảo rằng bạn đã chọn repo. Bạn cũng có thể cần thêm các quyền khác tùy thuộc vào các hoạt động bạn dự định thực hiện qua API.
-  - ![Permission](./resource/permission.png)
-    Nhấp vào Generate token.
-- **Bước 6**: Sao chép Token
-  - Sau khi token được tạo, GitHub sẽ hiển thị cho bạn một lần duy nhất. Hãy chắc chắn sao chép token này và lưu nó một cách an toàn. Bạn không thể xem lại token sau khi rời khỏi trang này.
-  - Sử dụng token này thay cho mật khẩu khi bạn truy cập GitHub qua API hoặc các công cụ dòng lệnh.
+- This project is used to fake commits on github according to the time stamp you want.
+- I made this project just for fun hehe ^^
 
 ## Install
 
@@ -34,3 +12,32 @@
 - Install all of library: `pip install -r requirements.txt`
 - Run it with command: `python app.py`
 - Enjoy it ^^
+
+## How to get the `GITHUB_TOKEN`
+
+To get a Personal Access Token (PAT) from GitHub, you need to follow these steps. This token will allow you to perform actions on GitHub via the API, such as creating new repositories, pushing code, and more depending on the permissions you grant the token.
+
+- **Step 1**: Log in to GitHub
+- Open your browser and log in to your GitHub account at github.com.
+
+- **Step 2**: Go to Settings
+- Once logged in, click on your avatar in the upper right corner of the screen, then select Settings from the drop-down menu.
+
+- **Step 3**: Go to [Developer settings](https://github.com/settings/apps)
+- In the settings page, scroll down to the bottom and select Developer settings at the bottom of the page, located in the section for advanced customizations.
+- **Step 4**: [Personal Access Tokens](https://github.com/settings/tokens)
+- In the left menu of Developer settings, select Personal access tokens. Then click the Generate new token button in the upper right corner of the list of existing tokens (if any).
+- **Step 5**: Create Token [New Token](https://github.com/settings/tokens/new)
+- Give your token a name in the Note field so that it can be easily identified for future use.
+- Select an expiration time for the token in the Expiration section. You can choose from "No expiration" to a certain time like 30 days, 90 days, etc.
+- Select the permissions (scopes) you want to grant to the token. To create and manage repositories, make sure you have selected repo. You may also need to add other permissions depending on the operations you plan to perform via the API.
+- ![Permission](./resource/permission.png)
+Click Generate token.
+- **Step 6**: Copy the Token
+- Once the token is generated, GitHub will show it to you only once. Be sure to copy this token and save it safely. You cannot view the token after leaving this page.
+- Use this token instead of a password when accessing GitHub via the API or command line tools.
+
+## Support me
+
+- If you find this project interesting, you can invite me for a cup of coffee ^^
+- [Buy Me A Coffee](https://buymeacoffee.com/shr3wd)

@@ -5,6 +5,7 @@ import sys
 import time
 import faker
 import requests
+from art import text2art
 
 GITHUB_USERNAME = "your_github_username"
 GITHUB_TOKEN = "your_github_personal_access_token" 
@@ -113,7 +114,14 @@ def fake_commit(username, email, message="Fake commit", from_date="2021-01-01", 
         print(f"Failed to push changes: {e}")
 
 if __name__ == "__main__":
-
+    print("""
+          Welcome to Fake Commit GitHub - A tool to create fake commits on GitHub.
+          ========================================================================
+          =                         Author: shr3wd                               =
+          =                 GitHub: https://github.com/shr3wcl                   =
+          ========================================================================
+          """)
+    print(text2art("Fake Commit GitHub"))
     if len(sys.argv) < 2:
         GITHUB_USERNAME = input("[+] Enter your GitHub username: ")
         GITHUB_TOKEN = input("[+] Enter your GitHub personal access token: ")
@@ -152,6 +160,20 @@ if __name__ == "__main__":
                 fake_commit(username, email, message, from_date, to_date, time_commit, is_random)
         except FileNotFoundError:
             print("[-] Could not find .config file.")
+        sys.exit(1)
+    elif len(sys.argv) == 2 and sys.argv[1] == "help":
+        print("Usage: ")
+        
+        print("[1] If you want to enter the details manually, run the script without any arguments.")
+        print("    Example: python app.py")
+        print("[2] If you want to use the configuration file, run the script with 'config' as an argument.")
+        print("    Example: python app.py config")
+        print("[3] If you want to see the help message, run the script with 'help' as an argument.")
+        print("    Example: python app.py help")
+        print("[4] If you want to use the command line arguments, run the script with the following arguments.")
+        print("    Example: python app.py <username> <email> <message> <from_date> <to_date> <time_commit> <is_random>")
+        
+        print("[!] You can also save the configuration to a .config file.")
         sys.exit(1)
     else:
         try:

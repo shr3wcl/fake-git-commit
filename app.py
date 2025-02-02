@@ -18,7 +18,7 @@ def github_repo_exists(repo_name):
 
 def create_github_repo(repo_name):
     url = "https://api.github.com/user/repos"
-    data = {"name": repo_name, "private": False}  
+    data = {"name": repo_name, "private": False}
     headers = {"Accept": "application/vnd.github.v3+json"}
     
     response = requests.post(url, json=data, auth=(GITHUB_USERNAME, GITHUB_TOKEN))
@@ -61,15 +61,15 @@ def check_repo():
 
     if not github_repo_exists(REPO_NAME):
         if create_github_repo(REPO_NAME):
-            repo.create_remote("origin", f"https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git")
-            repo.remotes.origin.push("refs/heads/master:refs/heads/master")            
+            repo.create_remote("origin", f"https://{GITHUB_TOKEN}@github.com/{GITHUB_USERNAME}/{REPO_NAME}.git")
+            repo.remotes.origin.push("refs/heads/master:refs/heads/master")          
             print(f"[+] Repository '{REPO_NAME}' has been pushed to GitHub.")
         else:
             print("[-] Could not create repository on GitHub.")
     else:
         print(f"[+] Repository '{REPO_NAME}' already exists on GitHub.")
         if "origin" not in repo.remotes:
-            repo.create_remote("origin", f"https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git")
+            repo.create_remote("origin", f"https://{GITHUB_TOKEN}@github.com/{GITHUB_USERNAME}/{REPO_NAME}.git")
 
         if repo.active_branch.tracking_branch() is None:
             try:

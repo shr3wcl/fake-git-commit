@@ -40,4 +40,4 @@ Click Generate token.
 ## Support me
 
 - If you find this project interesting, you can invite me for a cup of coffee ^^
-- [Buy Me A Coffee](https://buymeacoffee.com/shr3wd)
+<a href="https://www.buymeacoffee.com/shr3wd"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=shr3wd&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" width="200"></a>

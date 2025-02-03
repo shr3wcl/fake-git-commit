@@ -10,6 +10,8 @@ from art import text2art
 GITHUB_USERNAME = "your_github_username"
 GITHUB_TOKEN = "your_github_personal_access_token" 
 REPO_NAME = "fake-commit-github"
+REPO_URL = f'https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git'
+
 
 def github_repo_exists(repo_name):
     url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{repo_name}"
@@ -84,6 +86,8 @@ def check_repo():
 def fake_commit(username, email, message="Fake commit",
                 from_date="2021-01-01", to_date="2021-12-31",
                 time_commit="12:00:00", is_random=False):
+    global REPO_NAME, REPO_URL
+    REPO_URL = f'https://github.com/{username}/{REPO_NAME}.git'
 
     repo = check_repo()
     fake = faker.Faker()
